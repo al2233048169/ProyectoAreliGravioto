@@ -1,0 +1,319 @@
+/* css/estilos.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #2d8ef0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+/* Enlaces */
+a {
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+/* Barra de navegación personalizada */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Secciones */
+section {
+    padding: 3rem 0;
+}
+
+/* Tarjetas personalizadas */
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.card-title {
+    color: #0d6efd;
+}
+
+/* Pie de página personalizado */
+footer {
+    background-color: #212529 !important;
+}
+
+footer a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* Botones personalizados */
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gallery-slider {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+.gallery-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-prev, .gallery-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+}
+
+.gallery-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.gallery-prev:hover, .gallery-next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.gallery-thumbnail {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    border-radius: 4px;
+}
+
+.gallery-thumbnail:hover, .gallery-thumbnail.active {
+    opacity: 1;
+}
+
+/* Lightbox */
+.gallery-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.gallery-lightbox-content {
+    display: block;
+    margin: 60px auto;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.gallery-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 2rem;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Ajustes para el formulario de contacto */
+.form-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mapa-ubicacion {
+    height: 300px;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+.audio-container {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.enlace-externo {
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.enlace-externo img {
+    max-width: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.enlace-externo img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el menú desplegable */
+.navbar .dropdown-menu {
+    background-color: #0d6efd; /* Color primario de Bootstrap */
+    border: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.navbar .dropdown-item {
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #0b5ed7; /* Color hover de Bootstrap */
+    color: white;
+}
+
+/* Efecto rollover para los ítems del menú */
+.navbar-nav .nav-item {
+    position: relative;
+    margin: 0 5px;
+}
+
+.navbar-nav .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+/* Transición suave para el dropdown */
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-top: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+.hover-grow:hover {
+    transform: scale(1.1);
+}
+
+/* Efecto para toda la tarjeta */
+.card-clickable {
+    transition: all 0.3s ease;
+}
+
+.card-clickable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
